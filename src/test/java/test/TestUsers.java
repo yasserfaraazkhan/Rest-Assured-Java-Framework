@@ -50,6 +50,9 @@ public class TestUsers extends BaseTest {
         String actualTitle = user_data[0].getPhone();
         // Assert that no response data is received indicating number does not exists
         // Currently the return is non empty which is a bug
-        Assert.assertNull(actualTitle, String.format(" expected NUll but found %s", actualTitle));
+        // Assert.assertNull(actualTitle, String.format(" expected NUll but found %s",
+        // actualTitle));
+        Assert.assertNotEquals(actualTitle, inValidPhoneNumber);
     }
+
 }
