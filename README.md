@@ -1,4 +1,7 @@
 # Rest Assured API testing with Java and TestNG runner
+[![Build Status](https://travis-ci.com/johncena123456/Rest-Assured-Java-Framework.svg?branch=master)](https://travis-ci.com/johncena123456/Rest-Assured-Java-Framework)
+
+![Java CI with Maven](https://github.com/johncena123456/Rest-Assured-Java-Framework/workflows/Java%20CI%20with%20Maven/badge.svg)
 
 This is a Rest Assured testing framework using Java, testNG, POJO, concepts
 
