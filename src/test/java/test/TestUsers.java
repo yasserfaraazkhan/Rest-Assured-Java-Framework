@@ -20,8 +20,14 @@ public class TestUsers extends BaseTest {
         getUser.setExpectedStatusCode(200);
         getUser.perform();
 
-        UserListPOJO[] user_data = getUser.getAPIResponseAsPOJO(UserListPOJO[].class);
+        UsersPOJO[] user_data = getUser.getAPIResponseAsPOJO(UsersPOJO[].class);
+        for (UsersPOJO user : user_data) {
+            Assert.assertNotNull(user.getFirstName());
+            Assert.assertNotNull(user.getLastName());
+            Assert.assertNotNull(user.getPhone());
+            Assert.assertNotNull(user.getCareer());
 
+        }
     }
 
     @Test(dataProvider = "dataproviderForTestCase", dataProviderClass = GenericDataProvider.class)
@@ -32,10 +38,13 @@ public class TestUsers extends BaseTest {
         getUser.perform();
 
         UsersPOJO[] user_data = getUser.getAPIResponseAsPOJO(UsersPOJO[].class);
-        String actualTitle = user_data[0].getPhone();
-        // Assert that same number is received indicating number exists
-        Assert.assertEquals(actualTitle, validPhoneNumber);
+        for (UsersPOJO user : user_data) {
+            Assert.assertNotNull(user.getFirstName());
+            Assert.assertNotNull(user.getLastName());
+            Assert.assertNotNull(user.getPhone());
+            Assert.assertNotNull(user.getCareer());
 
+        }
     }
 
     @Test(dataProvider = "dataproviderForTestCase", dataProviderClass = GenericDataProvider.class)
@@ -46,13 +55,10 @@ public class TestUsers extends BaseTest {
         getUser.setExpectedStatusCode(200);
         getUser.perform();
 
-        UsersPOJO[] user_data = getUser.getAPIResponseAsPOJO(UsersPOJO[].class);
-        String actualTitle = user_data[0].getPhone();
+        UserListPOJO[] user_data = getUser.getAPIResponseAsPOJO(UserListPOJO[].class);
         // Assert that no response data is received indicating number does not exists
-        // Currently the return is non empty which is a bug
-        // Assert.assertNull(actualTitle, String.format(" expected NUll but found %s",
-        // actualTitle));
-        Assert.assertNotEquals(actualTitle, inValidPhoneNumber);
+        Assert.assertNull(user_data[0].getUsers());
+
     }
 
 }
