@@ -1,7 +1,6 @@
 package api.auth;
 
 import api.BaseAPI;
-import com.google.common.base.Joiner;
 import com.jayway.jsonpath.JsonPath;
 import org.apache.log4j.Logger;
 

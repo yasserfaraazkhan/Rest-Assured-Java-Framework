@@ -1,7 +1,7 @@
 package utils;
 
-import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.Properties;
 
 public class PropertiesManager {
@@ -13,12 +13,11 @@ public class PropertiesManager {
      * with the name "testsettings.properties" present in the current working
      * directory
      * 
-     * @throws IOException
+     * @throws IOExceptioni
      */
     public static void initializeProperties() throws IOException {
         properties = new Properties();
-        FileInputStream fileStream = new FileInputStream(
-                System.getProperty("user.dir") + "API_Framework/src/main/resources/testsettings.properties");
+        InputStream fileStream = PropertiesManager.class.getResourceAsStream("/testsettings.properties");
         properties.load(fileStream);
         fileStream.close();
     }

@@ -7,11 +7,6 @@ import java.util.Random;
 import org.testng.ITestContext;
 import org.testng.annotations.DataProvider;
 
-/**
- * <p>
- * Class to give Generic dataprovider <br/>
- * </p>
- */
 public class GenericDataProvider {
 	@DataProvider(name = "dataproviderForTestCase")
 	public static Object[] sampleDataProvider(Method m, ITestContext iTestContext) throws IOException {
