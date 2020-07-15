@@ -1,0 +1,18 @@
+  
+language:
+    java
+
+sudo:
+    false
+    
+dist: trusty
+
+jdk:
+    - oraclejdk13
+
+matrix:
+    allow_failures:
+        - jdk: oraclejdk13
+
+script:
+    - mvn test -B
