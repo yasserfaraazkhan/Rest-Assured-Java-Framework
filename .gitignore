@@ -1,0 +1,9 @@
+target
+test-output
+log.out
+.DS_Store
+.classpath
+.project
+.settings
+../.DS_Store
+
