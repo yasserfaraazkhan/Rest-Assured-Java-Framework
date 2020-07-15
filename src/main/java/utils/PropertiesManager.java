@@ -18,7 +18,7 @@ public class PropertiesManager {
     public static void initializeProperties() throws IOException {
         properties = new Properties();
         FileInputStream fileStream = new FileInputStream(
-                "/Users/yasserkhan/Desktop/yasProj/API Framework using Java Restassured TestNG/API_Framework/src/main/resources/testsettings.properties");
+                System.getProperty("user.dir") + "API_Framework/src/main/resources/testsettings.properties");
         properties.load(fileStream);
         fileStream.close();
     }

@@ -21,7 +21,7 @@ public class TestUsers extends BaseTest {
         getUser.perform();
 
         UserListPOJO[] user_data = getUser.getAPIResponseAsPOJO(UserListPOJO[].class);
-        
+
     }
 
     @Test(dataProvider = "dataproviderForTestCase", dataProviderClass = GenericDataProvider.class)
