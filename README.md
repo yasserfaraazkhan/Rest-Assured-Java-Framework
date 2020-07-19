@@ -3,6 +3,9 @@
 
 ![Java CI with Maven](https://github.com/johncena123456/Rest-Assured-Java-Framework/workflows/Java%20CI%20with%20Maven/badge.svg)
 
+[![codecov](https://codecov.io/gh/johncena123456/Rest-Assured-Java-Framework/branch/master/graph/badge.svg)](https://codecov.io/gh/johncena123456/Rest-Assured-Java-Framework)
+
+
 This is a Rest Assured testing framework using Java, testNG, POJO, concepts
 
 ## Installation
